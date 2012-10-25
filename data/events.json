@@ -1,0 +1,6 @@
+[
+	{ "name": "Learn Angular", "start": "2012-10-24T09:00", "end": "2012-10-24T10:30", "color": "#ff6655" },
+	{ "name": "build an angular app", "start": "2012-10-18T12:00", "end": "2012-10-18T14:00", "color": "#5566ff" },
+	{ "name": "Be Cool!", "start": "2012-10-17T11:30", "end": "2012-10-17T12:30", "color": "#66ff55" },
+	{ "name": "Learn Angular", "start": "2012-10-21T14:00", "end": "2012-10-21T16:30" }
+]

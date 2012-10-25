@@ -1,0 +1,13 @@
+<ul id="events" ng-cloak>
+	<li ng-repeat="event in events | filter:isInWeek" ng-mousedown="moveEvent()" ng-class="{active : isActiveEvent()}" ng-style="{ backgroundColor: getEventBackgroundColor(), borderColor: getEventBorderColor(), left:getEventLeft(), top:getEventTop(), height:getEventHeight(), width:getEventWidth() }">
+		<span class="name">{{event.name}}</span>
+		<time class="start" datetime="{{event.start}}">{{ event.start | dateFilter:"DD.MM.YY H:mm" }}</time>
+		<span class="seperator">&#150;</span>
+		<time class="end" datetime="{{event.end}}">{{ event.end | dateFilter:"DD.MM.YY H:mm" }}</time>
+		<div class="dragbar" ng-mousedown="resizeEvent()" ng-style="{ color: getEventBorderColor() }">=</div>
+	</li>
+</ul>
+
+<div id="timeline" ng-style="{ top: getTimelineTop() }" ng-show="isActualWeek()">
+	<div class="arrow"></div>
+</div>

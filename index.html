@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="Calendar">
+
+	<head>
+		<meta charset="UTF-8"> 
+		
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<title>Angular Calendar Example</title>
+	</head>
+	
+	<body ng-controller="CalendarCtrl" bn-document-mousemove="mousemove()" bn-document-mouseup="mouseup()">
+		<header>
+			<h1>Angular Calendar Example</h1>
+			<div id="date" ng-cloak>
+				<span class="handle" ng-click="switchDate(-7)">&#8610;</span>
+				<time class="viewStart" datetime="{{view.start}}">{{view.start | dateFilter:"DD.MM"}}</time>
+				<span class="seperator">&#150;</span> 
+				<time class="viewEnd" datetime="{{view.end}}">{{view.end | dateFilter:"DD.MM.YY"}}</time>
+				<span class="handle" ng-click="switchDate(+7)">&#8611;</span>
+			</div>
+		</header>
+		<div id="calendar">
+			<ng-include src="'views/calendar/main.html'"></ng-include>
+			<ng-include src="'views/event/list.html'"></ng-include>
+		</div>
+		
+ 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+		<script src="js/moment.min.js" type="text/javascript"></script>
+		<script src="js/functions.js" type="text/javascript"></script>
+	</body>
+	
+</html>
