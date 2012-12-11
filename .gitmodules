@@ -1,3 +1,6 @@
 [submodule "js/angular"]
 	path = js/angular
 	url = git://github.com/angular/angular.js.git
+[submodule "js/jquery"]
+	path = js/jquery
+	url = git://github.com/jquery/jquery.git
