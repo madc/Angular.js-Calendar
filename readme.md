@@ -3,7 +3,7 @@
 This is a first approach of writing a calendar application using Angualar JS and jQuery.
 Bug fixes and code optimisation are highly appreciated.
 
-jQuery and AngularJS are loaded from the Google API at the moment. However, they are also included as a submudule already, because I am planning to implement a local fallback.
+The jQuery 1.8.3 and AngularJS 1.0.3 libraries are loaded from the Google CDN. If the libs are not reachable for some reason, a fallback to local copies is implemented.
 
 ## Dependencies
 
